@@ -52,13 +52,13 @@ const Header = () => {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-slate-200 p-2 text-slate-700 transition hover:border-[#D7C3A3] hover:text-[#384B70] lg:hidden"
+          className="inline-flex flex-col items-center justify-center gap-1 rounded-full border border-slate-200 p-2 text-slate-700 transition hover:border-[#D7C3A3] hover:text-[#384B70] lg:hidden"
           aria-label="Menüyü Aç"
           onClick={toggleMenu}
         >
-          <span className="h-0.5 w-5 rounded bg-current" />
-          <span className="mt-1 h-0.5 w-5 rounded bg-current" />
-          <span className="mt-1 h-0.5 w-5 rounded bg-current" />
+          <span className="block h-0.5 w-5 rounded bg-current" />
+          <span className="block h-0.5 w-5 rounded bg-current" />
+          <span className="block h-0.5 w-5 rounded bg-current" />
         </button>
       </div>
 
