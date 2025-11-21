@@ -1,67 +1,57 @@
+import Image from "next/image";
+
 const teamMembers = [
   {
     name: "Uzm. Dt. Ali Yılmaz",
     title: "İmplant ve Cerrahi",
     photo: "/doctor1.webp",
-    description:
-      "İleri implantoloji ve cerrahi alanında 12 yıllık deneyime sahiptir. Doğal görünümlü sonuçlar için kişiye özel planlar oluşturur.",
+    description: "İleri implantoloji ve cerrahi alanında 12 yıllık deneyim.",
   },
   {
     name: "Uzm. Dt. Ayşe Demir",
     title: "Estetik Diş Hekimi",
     photo: "/doctor2.webp",
-    description:
-      "Estetik restorasyonlar ve gülüş tasarımı üzerine çalışır. Dijital planlama ile her hastaya sade ve doğala yakın bir estetik sunar.",
+    description: "Gülüş tasarımı ve estetik restorasyon uzmanı.",
   },
   {
     name: "Uzm. Dt. Emre Akman",
-    title: "Ortodonti ve Pedodonti",
+    title: "Ortodonti",
     photo: "/doctor3.webp",
-    description:
-      "Ortodonti ve çocuk diş hekimliği yaklaşımını birleştirir. Hem çocuklarda hem yetişkinlerde konforlu tedavi süreçleri yürütür.",
+    description: "Şeffaf plak ve modern ortodonti tedavileri.",
   },
 ];
 
 const Team = () => {
   return (
-    <section
-      id="team"
-      className="bg-white py-28 md:py-36"
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-[#384B70]">
-            Ekibimiz
+    <section id="team" className="bg-white py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#384B70]">
+            Hekim Kadromuz
           </p>
-          <div className="space-y-4">
-            <h2 className="font-heading text-3xl tracking-tight text-slate-900 md:text-4xl">
-            Alanında Uzman Hekimlerimiz
-            </h2>
-            <div className="mx-auto accent-line" />
-          </div>
-          <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-slate-600">
-            Tecrübeli hekimlerimiz, modern klinik altyapımız ve kişiye özel yaklaşımımızla her hastamızın güvenle
-            gülümsemesini sağlıyoruz.
-          </p>
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Alanında Uzman Hekimler
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((doctor) => (
             <div
               key={doctor.name}
-              className="flex transform flex-col items-center rounded-2xl border border-slate-100 bg-white/90 p-6 text-center shadow-[0_20px_45px_rgba(15,23,42,0.08)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(15,23,42,0.14)] md:p-8"
+              className="group relative flex flex-col items-center text-center"
             >
-              <img
-                src={doctor.photo}
-                alt={doctor.name}
-                className="mb-6 h-28 w-28 rounded-full object-cover ring-4 ring-white shadow-[0_10px_30px_rgba(15,23,42,0.15)]"
-                loading="lazy"
-              />
-              <h3 className="text-xl font-semibold text-slate-900">
-                {doctor.name}
-              </h3>
-              <p className="mb-4 text-sm uppercase tracking-[0.3em] text-slate-400">{doctor.title}</p>
-              <p className="text-sm leading-relaxed text-slate-600">{doctor.description}</p>
+              <div className="relative mb-6 h-64 w-64 overflow-hidden rounded-full border-4 border-white shadow-2xl shadow-slate-200">
+                 {/* Görsel efekti: Siyah beyazdan renkliye geçiş */}
+                 <Image
+                    src={doctor.photo}
+                    alt={doctor.name}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-110"
+                 />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">{doctor.name}</h3>
+              <p className="mb-3 text-sm font-medium uppercase tracking-widest text-[#384B70]">{doctor.title}</p>
+              <p className="max-w-xs text-sm leading-relaxed text-slate-500">{doctor.description}</p>
             </div>
           ))}
         </div>

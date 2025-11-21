@@ -1,67 +1,46 @@
 @import "tailwindcss";
 
 :root {
+  /* Premium Renk Paleti (Rauf Dent Marka Kimliği) */
+  --color-primary: #384B70; /* Derin Mavi - Güven */
+  --color-primary-dark: #2E3D63; /* Hover için */
+  --color-accent: #D7C3A3; /* Altın/Bej - Lüks */
+  --color-accent-light: #F3EBDF; /* Açık Bej - Arkaplanlar */
+  
+  /* Metin Renkleri */
+  --color-text-main: #0F172A; /* Slate 900 */
+  --color-text-secondary: #475569; /* Slate 600 */
+  --color-text-light: #94A3B8; /* Slate 400 */
+
+  /* Arkaplanlar */
   --background: #ffffff;
   --foreground: #171717;
-  --accent-gold: #d7c3a3;
-  --accent-navy: #384b70;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* --- Temel Tipografi ve Scroll --- */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden; /* Yatay taşmayı engelle */
 }
 
-body {
-  font-family: var(--font-geist-sans), "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+/* Başlıklar için Özel Font (Serif) */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-playfair), serif;
 }
 
-.font-heading {
-  font-family: var(--font-playfair), "Playfair Display", "Times New Roman", serif;
-  letter-spacing: -0.01em;
-}
-
-.accent-line {
-  height: 2px;
-  width: 64px;
-  border-radius: 999px;
-  background: var(--accent-gold);
-  display: inline-flex;
-}
-
-@keyframes success-alert-pop {
-  0% {
-    opacity: 0;
-    transform: translateY(12px) scale(0.97);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.animate-success-alert {
-  animation: success-alert-pop 0.45s ease forwards;
-}
-
+/* --- Özel Animasyonlar --- */
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -70,5 +49,30 @@ body {
 }
 
 .animate-fade-up {
-  animation: fade-up 0.8s ease forwards;
+  animation: fade-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0; /* Başlangıçta gizle */
+}
+
+@keyframes success-alert {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-success-alert {
+  animation: success-alert 0.4s ease-out forwards;
+}
+
+/* --- Dekoratif Çizgiler --- */
+.accent-line {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 9999px;
+}
+
+/* --- Selection Rengi (Premium His) --- */
+::selection {
+  background-color: var(--color-primary);
+  color: #ffffff;
 }
