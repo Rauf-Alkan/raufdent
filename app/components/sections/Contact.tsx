@@ -1,6 +1,9 @@
 const Contact = () => {
   return (
-    <section id="contact" className="bg-white pb-24 pt-10 md:pb-32">
+    <section
+      id="contact"
+      className="bg-gradient-to-b from-white to-[#F7F1E6] pb-24 pt-10 md:pb-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">

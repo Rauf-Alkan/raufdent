@@ -61,7 +61,10 @@ const FastAppointment = () => {
   const showSuccessState = status === "success";
 
   return (
-    <section id="fast-appointment" className="bg-[#FAFAFA] py-24 lg:py-32">
+    <section
+      id="fast-appointment"
+      className="bg-gradient-to-r from-[#EEF4FF] via-white to-[#EAF6F2] py-24 lg:py-32"
+    >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-2 lg:px-8">
         
         {/* SOL: Bilgi Alanı */}

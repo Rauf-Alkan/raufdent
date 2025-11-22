@@ -33,7 +33,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="bg-white py-24 lg:py-36">
+    <section
+      id="services"
+      className="bg-gradient-to-b from-[#EEF3FF] to-white py-24 lg:py-36"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Başlık Alanı */}

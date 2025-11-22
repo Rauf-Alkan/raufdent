@@ -23,7 +23,10 @@ const features = [
 
 const FourFeatures = () => {
   return (
-    <section id="features" className="relative z-10 -mt-16 px-4 sm:px-6 lg:px-8 pointer-events-none">
+    <section
+      id="features"
+      className="relative z-10 -mt-16 bg-[#EEF3FF] px-4 pb-16 pt-10 sm:px-6 lg:px-8 pointer-events-none"
+    >
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (

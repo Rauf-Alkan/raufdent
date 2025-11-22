@@ -65,7 +65,10 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="bg-[#FAFAFA] py-24 lg:py-32">
+    <section
+      id="testimonials"
+      className="bg-gradient-to-b from-[#F8F1E7] via-[#FBF7F0] to-white py-24 lg:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         
         <div className="text-center max-w-2xl mx-auto mb-16">

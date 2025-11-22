@@ -4,7 +4,7 @@ const Esthetic = () => {
   return (
     <section
       id="esthetic"
-      className="relative bg-gradient-to-b from-[#FAFAFA] to-white py-28 md:py-36 overflow-hidden"
+      className="relative bg-gradient-to-r from-[#F9F2E8] via-white to-[#EEF4FF] py-28 md:py-36 overflow-hidden"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 md:grid-cols-2 md:gap-24 lg:px-8 items-center">
         

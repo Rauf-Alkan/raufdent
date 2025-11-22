@@ -20,7 +20,10 @@ const features = [
 
 const About = () => {
   return (
-    <section id="about" className="bg-white py-24 lg:py-32">
+    <section
+      id="about"
+      className="bg-gradient-to-b from-white to-[#F8F1E7] py-24 lg:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           

@@ -9,7 +9,10 @@ const Hero = () => {
   // URL'de ?name=... varsa onu al, yoksa varsayılan metni kullan
   const clinicName = searchParams.get("name") || "Ankara Kızılay Diş Kliniği";
   return (
-    <section id="hero" className="relative bg-[#FAFAFA] pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section
+      id="hero"
+      className="relative bg-gradient-to-b from-[#F7EFE3] via-[#FAFAFA] to-[#EEF3FF] pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden"
+    >
       
       {/* Arkaplan Dekoru (Opsiyonel - Hafiflik katar) */}
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-b from-[#F3EBDF]/30 to-transparent blur-3xl opacity-60" />
