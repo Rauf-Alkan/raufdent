@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const teamMembers = [
   {
-    name: "Uzm. Dt. Ali Yılmaz",
+    name: "Uzm. Dt. Elif Kaya",
     title: "İmplant ve Cerrahi",
     photo: "/doctor1.webp",
     description: "İleri implantoloji ve cerrahi alanında 12 yıllık deneyim.",
@@ -14,7 +14,7 @@ const teamMembers = [
     description: "Gülüş tasarımı ve estetik restorasyon uzmanı.",
   },
   {
-    name: "Uzm. Dt. Emre Akman",
+    name: "Uzm. Dt. Merve Aksoy",
     title: "Ortodonti",
     photo: "/doctor3.webp",
     description: "Şeffaf plak ve modern ortodonti tedavileri.",
