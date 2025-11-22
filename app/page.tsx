@@ -10,26 +10,25 @@ import Team from "@/components/sections/Team";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
+// BU SATIR HATAYI ÇÖZER:
+// Sayfanın statik değil, dinamik (istek anında çalışan) olduğunu belirtir.
+export const dynamic = "force-dynamic";
+
 const Home = () => {
   return (
     <>
       <Header />
       <main>
         <Hero />
-        <FourFeatures /> {/* Özellikleri yukarı aldık, güven verir */}
+        <FourFeatures />
         <About />
         <Services />
         <Esthetic />
         <Team />
         <Testimonials />
-        
-        {/* Formu buraya, en sona aldık. İkna olan hasta burada doldurur. */}
         <FastAppointment />
-        
-        {/* İletişim sadece adres/harita olarak kalacak */}
         <Contact />
-        
-        <div className="mx-auto w-full max-w-6xl border-t border-slate-200" />
+        <div className="mx-auto mt-10 w-full max-w-6xl border-t border-slate-200" />
         <Footer />
       </main>
     </>
