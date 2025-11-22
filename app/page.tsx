@@ -16,15 +16,20 @@ const Home = () => {
       <Header />
       <main>
         <Hero />
+        <FourFeatures /> {/* Özellikleri yukarı aldık, güven verir */}
         <About />
-        <FastAppointment />
-        <Esthetic />
-        <FourFeatures />
         <Services />
-        <Testimonials />
+        <Esthetic />
         <Team />
+        <Testimonials />
+        
+        {/* Formu buraya, en sona aldık. İkna olan hasta burada doldurur. */}
+        <FastAppointment />
+        
+        {/* İletişim sadece adres/harita olarak kalacak */}
         <Contact />
-        <div className="mx-auto mt-10 w-full max-w-6xl border-t border-slate-200" />
+        
+        <div className="mx-auto w-full max-w-6xl border-t border-slate-200" />
         <Footer />
       </main>
     </>

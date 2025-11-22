@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const navLinks = [
@@ -15,6 +16,9 @@ const navLinks = [
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const searchParams = useSearchParams();
+  const clinicName = searchParams.get("name") || "Rauf Dent";
 
   // Scroll algılayıp gölge eklemek için
   useEffect(() => {
@@ -36,17 +40,17 @@ const Header = () => {
         {/* LOGO */}
         <Link href="#hero" className="flex items-center gap-2 group">
           <div className="relative h-10 w-10 overflow-hidden rounded-lg">
-             {/* Logo dosyan public klasöründe olmalı */}
+             {/* Logo sabit kalır, metin değişir */}
              <Image
               src="/logo.png"
-              alt="Rauf Dent"
+              alt={clinicName}
               width={40}
               height={40}
               className="object-contain transition-transform group-hover:scale-110"
              />
           </div>
           <span className={`font-heading text-xl font-bold tracking-tight ${scrolled ? "text-slate-900" : "text-slate-900"}`}>
-            Rauf Dent
+            {clinicName} {/* DİNAMİK İSİM */}
           </span>
         </Link>
 

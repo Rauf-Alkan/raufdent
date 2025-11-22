@@ -1,6 +1,13 @@
+"use client";
+import { useSearchParams } from "next/navigation";
+
 import Link from "next/link";
 
+
 const Hero = () => {
+  const searchParams = useSearchParams();
+  // URL'de ?name=... varsa onu al, yoksa varsayılan metni kullan
+  const clinicName = searchParams.get("name") || "Ankara Kızılay Diş Kliniği";
   return (
     <section id="hero" className="relative bg-[#FAFAFA] pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       
@@ -20,7 +27,7 @@ const Hero = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
               <span className="text-xs font-bold tracking-widest text-slate-600 uppercase">
-                Ankara Kızılay Diş Kliniği
+                {clinicName}
               </span>
             </div>
 

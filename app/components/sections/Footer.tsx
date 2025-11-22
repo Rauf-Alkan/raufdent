@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 const Footer = () => {
+  const searchParams = useSearchParams();
+  const clinicName = searchParams.get("name") || "Rauf Dent";
   return (
     <footer className="bg-[#0F172A] text-white pt-20 pb-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -12,12 +16,12 @@ const Footer = () => {
             <div className="flex items-center gap-3">
                <Image 
                  src="/logo.png" 
-                 alt="Rauf Dent" 
+                 alt={clinicName}
                  width={40} 
                  height={40} 
                  className="brightness-0 invert object-contain" 
                />
-               <span className="font-heading text-2xl font-bold tracking-tight">Rauf Dent</span>
+               <span className="font-heading text-2xl font-bold tracking-tight">{clinicName}</span>
             </div>
             <p className="text-sm leading-relaxed text-slate-400">
               Ankara Kızılay&apos;da modern diş hekimliği ve kişiye özel tedavilerle sağlıklı, estetik gülüşler sunuyoruz. Hasta memnuniyeti ve konforu önceliğimizdir.
@@ -82,7 +86,7 @@ const Footer = () => {
 
         {/* Alt Telif */}
         <div className="mt-16 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>© 2025 Rauf Dent Klinik. Tüm hakları saklıdır.</p>
+          <p>© 2025 {clinicName} Klinik. Tüm hakları saklıdır.</p>
           <div className="flex gap-6">
              <a href="#" className="hover:text-slate-300 transition">Gizlilik Politikası</a>
              <a href="#" className="hover:text-slate-300 transition">KVKK Metni</a>
